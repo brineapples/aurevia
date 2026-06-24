@@ -2,13 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
   var header = document.getElementById('ve-sticky');
   var toggle = document.getElementById('ve-toggle');
   var mobileMenu = document.getElementById('ve-mobile-menu');
-  var preloader = document.querySelector('.preloader');
-
-  if (preloader) {
-    window.setTimeout(function () {
-      preloader.classList.add('is-hidden');
-    }, 150);
-  }
 
   if (toggle && mobileMenu) {
     toggle.addEventListener('click', function () {
@@ -28,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var onScroll = function () {
       header.classList.toggle('is-scrolled', window.scrollY > 16);
     };
+
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
   }

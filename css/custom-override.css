@@ -766,9 +766,16 @@ main {
   .ve-grid-2,
   .ve-values-grid,
   .ve-strip,
-  .ve-hero-metrics,
   .ve-bullets.inline {
     grid-template-columns: 1fr;
+  }
+
+  .ve-hero-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ve-hero-metrics > div:last-child {
+    grid-column: 1 / -1;
   }
 
   .ve-leader-card {
@@ -807,8 +814,44 @@ main {
     border-radius: 16px;
   }
 
+  .ve-hero-copy {
+    padding: 22px 14px 24px;
+    min-height: auto;
+  }
+
+  .ve-hero h1 {
+    font-size: clamp(1.6rem, 6.8vw, 2.1rem);
+    max-width: none;
+  }
+
+  .ve-hero p {
+    font-size: 0.88rem;
+    max-width: none;
+    margin-top: 12px;
+  }
+
+  .ve-hero-metrics {
+    gap: 8px;
+    margin-top: 18px;
+    width: 100%;
+  }
+
+  .ve-hero-metrics > div {
+    padding: 12px 10px;
+  }
+
+  .ve-hero-metrics strong {
+    font-size: 1rem;
+  }
+
+  .ve-hero-metrics span {
+    font-size: 0.7rem;
+  }
+
   .ve-hero-actions {
     flex-direction: column;
+    width: 100%;
+    margin-top: 18px;
   }
 
   .ve-btn-primary,
