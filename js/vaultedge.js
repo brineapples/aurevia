@@ -27,7 +27,13 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   var revealTargets = document.querySelectorAll('[data-reveal]');
-  if ('IntersectionObserver' in window && revealTargets.length) {
+  var isMobileViewport = window.matchMedia('(max-width: 768px)').matches;
+
+  if (isMobileViewport) {
+    revealTargets.forEach(function (el) {
+      el.classList.add('is-visible');
+    });
+  } else if ('IntersectionObserver' in window && revealTargets.length) {
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
