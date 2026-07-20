@@ -699,6 +699,144 @@ main {
   margin-top: 18px;
 }
 
+.ve-structure-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.85fr);
+  gap: 18px;
+  align-items: start;
+}
+
+.ve-org-card {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top left, rgba(212, 160, 23, 0.12), transparent 34%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.012));
+}
+
+.ve-org-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(rgba(212, 160, 23, 0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(212, 160, 23, 0.035) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), transparent 72%);
+}
+
+.ve-org-card-wide {
+  grid-row: span 2;
+}
+
+.ve-org-card-head,
+.ve-role-list,
+.ve-total-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.ve-org-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(212, 160, 23, 0.24);
+}
+
+.ve-org-card-head span {
+  color: var(--gold-soft);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.55rem;
+  line-height: 1.1;
+}
+
+.ve-org-card-head strong,
+.ve-role-title span {
+  border: 1px solid rgba(212, 160, 23, 0.34);
+  border-radius: 999px;
+  background: rgba(212, 160, 23, 0.1);
+  color: var(--gold-soft);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.ve-org-card-head strong {
+  padding: 9px 11px;
+  white-space: nowrap;
+}
+
+.ve-role-list {
+  display: grid;
+  gap: 12px;
+}
+
+.ve-role-item {
+  padding: 16px;
+  border: 1px solid rgba(212, 160, 23, 0.16);
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.24);
+}
+
+.ve-role-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.ve-role-title strong {
+  color: var(--gold-soft);
+  font-size: 0.94rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.ve-role-title span {
+  padding: 7px 9px;
+  flex: 0 0 auto;
+}
+
+.ve-name-list {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.94rem;
+}
+
+.ve-total-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.ve-total-grid div {
+  min-height: 94px;
+  padding: 14px;
+  border: 1px solid rgba(212, 160, 23, 0.18);
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.28);
+}
+
+.ve-total-grid strong {
+  display: block;
+  color: var(--gold-soft);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.9rem;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.ve-total-grid span {
+  display: block;
+  color: var(--text);
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
 .ve-footer {
   padding-top: 24px;
   padding-bottom: 34px;
@@ -760,8 +898,13 @@ main {
 @media (max-width: 1100px) {
   .ve-hero,
   .ve-footer-inner,
-  .ve-grid-3 {
+  .ve-grid-3,
+  .ve-structure-grid {
     grid-template-columns: 1fr;
+  }
+
+  .ve-org-card-wide {
+    grid-row: auto;
   }
 
   .ve-hero-panel {
@@ -876,5 +1019,19 @@ main {
   .ve-btn-primary,
   .ve-btn-ghost {
     width: 100%;
+  }
+
+  .ve-org-card-head,
+  .ve-role-title {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .ve-org-card-head strong {
+    white-space: normal;
+  }
+
+  .ve-total-grid {
+    grid-template-columns: 1fr;
   }
 }
