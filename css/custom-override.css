@@ -194,8 +194,13 @@ summary {
 }
 
 .ve-nav a:hover::after,
-.ve-nav a:focus-visible::after {
+.ve-nav a:focus-visible::after,
+.ve-nav a.active::after {
   transform: scaleX(1);
+}
+
+.ve-nav a.active {
+  color: var(--gold-soft);
 }
 
 .ve-toggler {
@@ -552,6 +557,20 @@ main {
 
 .ve-card p:last-child {
   margin-bottom: 0;
+}
+
+.ve-text-link {
+  display: inline-flex;
+  margin-top: 4px;
+  color: var(--gold-soft);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.ve-text-link:hover {
+  color: var(--white);
 }
 
 .ve-bullets {
