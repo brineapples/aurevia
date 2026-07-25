@@ -706,7 +706,7 @@ main {
 
 .ve-structure-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.85fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
   align-items: start;
 }
@@ -910,12 +910,16 @@ main {
 @media (max-width: 1100px) {
   .ve-hero,
   .ve-footer-inner,
-  .ve-grid-3,
-  .ve-structure-grid {
+  .ve-grid-3 {
     grid-template-columns: 1fr;
   }
 
+  .ve-structure-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .ve-org-card-wide {
+    grid-column: 1 / -1;
     grid-row: auto;
   }
 
