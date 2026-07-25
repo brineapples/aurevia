@@ -1027,6 +1027,20 @@ main {
   .ve-strip > div,
   .ve-footer-inner > div {
     border-radius: 16px;
+    padding: 18px 16px;
+  }
+
+  .ve-org-card,
+  .ve-message-card {
+    padding: 18px 14px;
+  }
+
+  .ve-role-item {
+    padding: 12px 12px;
+  }
+
+  .ve-role-list {
+    gap: 10px;
   }
 
   .ve-hero-copy {
@@ -1043,6 +1057,17 @@ main {
     font-size: 0.88rem;
     max-width: none;
     margin-top: 12px;
+  }
+
+  .ve-card h3,
+  .ve-org-card-head span {
+    font-size: 1.1rem;
+  }
+
+  .ve-card p,
+  .ve-name-list,
+  .ve-role-title strong {
+    font-size: 0.92rem;
   }
 
   .ve-hero-metrics {
@@ -1079,17 +1104,24 @@ main {
   .ve-message-heading {
     align-items: flex-start;
     flex-direction: column;
+    gap: 8px;
   }
 
   .ve-org-card-head strong {
     white-space: normal;
   }
 
-  .ve-message-card {
-    padding: 22px 18px;
-  }
-
   .ve-total-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .ve-total-grid div {
+    min-height: 80px;
+    padding: 12px;
+  }
+
+  .ve-structure-grid {
+    gap: 14px;
   }
 }
