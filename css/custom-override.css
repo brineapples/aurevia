@@ -537,6 +537,43 @@ main {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.ve-grid-1 {
+  grid-template-columns: 1fr;
+}
+
+.ve-message-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 28px 30px;
+}
+
+.ve-message-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 4px;
+}
+
+.ve-message-heading h3 {
+  margin: 0;
+}
+
+.ve-message-heading span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(212, 160, 23, 0.14);
+  color: var(--gold-soft);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
 .ve-card,
 .ve-accordion,
 .ve-value,
@@ -1038,13 +1075,18 @@ main {
   }
 
   .ve-org-card-head,
-  .ve-role-title {
+  .ve-role-title,
+  .ve-message-heading {
     align-items: flex-start;
     flex-direction: column;
   }
 
   .ve-org-card-head strong {
     white-space: normal;
+  }
+
+  .ve-message-card {
+    padding: 22px 18px;
   }
 
   .ve-total-grid {
