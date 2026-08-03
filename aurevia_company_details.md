@@ -228,7 +228,7 @@ No limitations by geography, culture, or market boundaries.
 
 **VICE PRESIDENT** – Anabelle Reloj
 
-**EXECUTIVE DIRECTOR FOR STRATEGY & OPERATIONS** – Pheobe Jane Sambeli
+**EXECUTIVE DIRECTOR FOR STRATEGY & OPERATIONS** – Phoebe Jane Sambeli
 
 ---
 
